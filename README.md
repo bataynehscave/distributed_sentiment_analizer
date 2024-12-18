@@ -8,6 +8,7 @@ This project provides a FastAPI-based web service to analyze the sentiment of in
 - Apache Spark for distributed data processing
 - Logging for monitoring and debugging
 - Graceful shutdown of SparkContext
+- Using Tensorflow for Sentiment Analysis
 
 ## Requirements
 
@@ -19,8 +20,8 @@ This project provides a FastAPI-based web service to analyze the sentiment of in
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone https://github.com/bataynehscave/distributed_sentiment_analizer
+   cd distributed_sentiment_analizer
    ```
 2. **Install dependencies:**
 
@@ -44,6 +45,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 Send a POST request to /analyze_sentiment/ with a JSON body containing a list of texts.
 
 Example request:
+```
 json
 {
   "texts": ["I love programming!", "I hate bugs."]
@@ -54,7 +56,7 @@ json
 {
   "sentiments": ["positive", "negative"]
 }
-
+```
 3. **Access API documentation:**
 
 Open your browser and go to http://0.0.0.0:8000/docs to view and interact with the automatically generated API documentation.
