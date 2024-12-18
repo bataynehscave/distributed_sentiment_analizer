@@ -1,0 +1,18 @@
+# check requirments.txt for dependancies
+
+```yaml
+server:
+  host: 0.0.0.0
+  port: 8000
+
+spark:
+  app_name: SentimentAnalysis
+  master: local[*]
+
+logging:
+  level: INFO
+  filename: app.log
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+
+api:
+  analyze_sentiment_endpoint: /analyze_sentiment/
